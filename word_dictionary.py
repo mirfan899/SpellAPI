@@ -12,6 +12,6 @@ with open("en_wiki.txt", "r") as ifile:
 dictionary.filter_extremes(keep_n=100000)
 
 n_words = len(dictionary.token2id)
-with open("frequency_dictionary.txt", "w") as writer:
+with open("data/frequency_dictionary.txt", "w") as writer:
     for i in range(n_words):
         writer.write('{} {}\n'.format(dictionary[i], dictionary.cfs[i]))
