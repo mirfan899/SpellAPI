@@ -20,7 +20,7 @@ for key in bigram.vocab.keys():
 # for key, counts in bigram_model_counter.most_common(50):
 #     print('{} {}'.format(key, counts))
 
-with open("data/frequency_bigramdictionary.txt", "w") as writer:
+with open("dictionary/frequency_bigramdictionary.txt", "w") as writer:
     for key, counts in bigram_model_counter.items():
         if counts >= 10:
             writer.write('{} {}\n'.format(key, counts))

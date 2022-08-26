@@ -15,4 +15,6 @@ bigram_path = pkg_resources.resource_filename(
 # term_index is the column of the term and count_index is the
 # column of the term frequency
 sym_spell.load_dictionary(dictionary_path, term_index=0, count_index=1)
+sym_spell.load_dictionary("dictionary/cities.txt", term_index=0, count_index=2)
+sym_spell.load_dictionary("dictionary/names.txt", term_index=0, count_index=2)
 sym_spell.load_bigram_dictionary(bigram_path, term_index=0, count_index=2)

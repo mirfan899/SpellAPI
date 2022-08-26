@@ -31,3 +31,7 @@ python test.py
 
 ### helpful
 https://www.markhneedham.com/blog/2015/02/12/pythongensim-creating-bigrams-over-how-i-met-your-mother-transcripts/
+
+### datasets
+https://www.kaggle.com/datasets/sergejnuss/united-states-cities-database
+https://www.kaggle.com/datasets/kaggle/us-baby-names
