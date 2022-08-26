@@ -2,7 +2,8 @@ import pandas as pd
 
 names = pd.read_csv("data/uscities.csv", usecols=["city"])
 
-with open("dictionary/cities.txt", "a") as writer:
+names["city"] = names["city"].str.lower()
+with open("dictionary/cities.txt", "w") as writer:
     for name in names.values.tolist():
         print(name[0])
         parts = name[0].split(" ")

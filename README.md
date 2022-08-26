@@ -35,3 +35,11 @@ https://www.markhneedham.com/blog/2015/02/12/pythongensim-creating-bigrams-over-
 ### datasets
 https://www.kaggle.com/datasets/sergejnuss/united-states-cities-database
 https://www.kaggle.com/datasets/kaggle/us-baby-names
+
+### Sort and unique names and cities
+```shell
+sort dictionary/cities.txt | uniq > dictionary/sorted_cities.txt
+sort dictionary/names.txt | uniq > dictionary/sorted_names.txt
+cat dictionary/sorted_names.txt > dictionary/names.txt 
+cat dictionary/sorted_cities.txt > dictionary/cities.txt 
+```
