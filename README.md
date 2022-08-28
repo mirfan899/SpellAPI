@@ -1,3 +1,27 @@
+### Install packages.
+You need to install packages from requirements.txt
+```shell
+pip install -r requierments.txt
+```
+
+### Wikipedia Dump
+Download the latest Wikipedia English xml dump file. 
+```shell
+wget  https://dumps.wikimedia.org/enwiki/20220820/enwiki-20220820-pages-articles-multistream.xml.bz2
+```
+Takes around 20GB space.
+
+
+### Generate bigram dictionary.
+Now run following script to generate bigram dictionary.
+```shell
+python wiki_corpus.py -d enwiki-20220820-pages-articles-multistream.xml.bz2 -o en_wiki.txt
+```
+It will clean up the wikipedia and generates a text file.
+
+Now run `bigram_dictionary.py` script to generate the bigram dictionary.
+
+
 ### Installation
 Use docker file to deploy the api.
 
