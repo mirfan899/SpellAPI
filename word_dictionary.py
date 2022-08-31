@@ -9,7 +9,7 @@ with open("en_wiki.txt", "r") as ifile:
         dictionary.add_documents([tokens])
 
 
-dictionary.filter_extremes(keep_n=100000)
+dictionary.filter_extremes(keep_n=1000000)
 
 n_words = len(dictionary.token2id)
 with open("dictionary/frequency_dictionary.txt", "w") as writer:
