@@ -1,11 +1,18 @@
 from gensim.corpora import Dictionary
 from gensim.utils import simple_preprocess
+from itertools import islice
 
+
+N = 1000
 dictionary = Dictionary()
 
 with open("en_wiki.txt", "r") as ifile:
-    for line in ifile:
-        tokens = simple_preprocess(line)
+    while True:
+        lines500 = list(islice(ifile, N))
+        if not lines500:
+            break
+        text = " ".join(lines500)
+        tokens = simple_preprocess(text)
         dictionary.add_documents([tokens])
 
 
