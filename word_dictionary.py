@@ -19,7 +19,7 @@ with open("en_wiki.txt", "r") as ifile:
         # counts.update(tokens)
 
 
-dictionary.filter_extremes(keep_n=1000000)
+dictionary.filter_extremes(keep_n=5000000)
 # counter = counts.most_common(1000000)
 n_words = len(dictionary.token2id)
 # n_words = len(counter)
