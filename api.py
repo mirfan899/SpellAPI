@@ -21,7 +21,7 @@ class Spell(Resource):
         text = args["sentence"]
         result = {}
         if text:
-            suggestions = sym_spell.lookup_compound(text, max_edit_distance=2)
+            suggestions = sym_spell.lookup_compound(sym_spell.word_segmentation(text).corrected_string, max_edit_distance=2)
             for suggestion in suggestions:
                 result["corrected"] = suggestion.term
             return jsonify(result)

@@ -67,3 +67,8 @@ sort dictionary/names.txt | uniq > dictionary/sorted_names.txt
 cat dictionary/sorted_names.txt > dictionary/names.txt 
 cat dictionary/sorted_cities.txt > dictionary/cities.txt 
 ```
+
+Another approach is to use jamspell with wikipedia corpus.
+
+sudo apt install libgtest-dev build-essential cmake
+sudo apt install swig
