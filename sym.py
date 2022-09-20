@@ -30,7 +30,7 @@ input_term = (
     # "Keller Memorial Hospital in Scranton, Pennsylvania"
 )
 # max edit distance per lookup (per single word, not per whole input string)
-suggestions = sym_spell.lookup_compound(sym_spell.word_segmentation("lightshow").corrected_string, max_edit_distance=2)
+suggestions = sym_spell.lookup_compound(sym_spell.word_segmentation('john buu a oog').corrected_string, max_edit_distance=2, transfer_casing=True)
 # print(sym_spell.word_segmentation("austinlivermore texas").corrected_string)
 # print(sym_spell.word_segmentation("artfactory").corrected_string)
 
@@ -38,4 +38,10 @@ suggestions = sym_spell.lookup_compound(sym_spell.word_segmentation("lightshow")
 for suggestion in suggestions:
     print(suggestion.term, suggestion.distance, "\n")
 
-print(len(sym_spell.replaced_words))
+suggestions = sym_spell.lookup_compound('I am the begt spell cherken!', max_edit_distance=2)
+# print(sym_spell.word_segmentation("austinlivermore texas").corrected_string)
+# print(sym_spell.word_segmentation("artfactory").corrected_string)
+
+# display suggestion term, edit distance, and term frequency
+for suggestion in suggestions:
+    print(suggestion.term, suggestion.distance, "\n")
