@@ -1,3 +1,4 @@
+import os
 from collections import Counter
 
 from gensim.corpora import Dictionary
@@ -23,6 +24,7 @@ dictionary.filter_extremes(keep_n=5000000)
 # counter = counts.most_common(1000000)
 n_words = len(dictionary.token2id)
 # n_words = len(counter)
+os.makedirs("dictionary", exist_ok=True)
 with open("dictionary/frequency_dictionary.txt", "w") as writer:
     for i in range(n_words):
         writer.write('{} {}\n'.format(dictionary[i], dictionary.cfs[i]))

@@ -7,23 +7,16 @@ from gensim.corpora import WikiCorpus
 
 @click.command()
 @click.option("--dump", "-d", type=click.Path(), help="Path to XML dump file")
-@click.option("--txt", "-o", type=click.Path(), help="Path to text file")
 def main(dump, txt):
     """Convert Wikipedia xml dump file to text corpus"""
     if not dump:
         click.echo("Please provide a path to the XML dump file")
         sys.exit(1)
-    if not txt:
-        click.echo("Please provide a path to the text file")
-        sys.exit(1)
     if not os.path.exists(dump):
         click.echo("XML dump file does not exist")
         sys.exit(1)
-    if not os.path.exists(txt):
-        click.echo("Text file does not exist")
-        sys.exit(1)
 
-    output = open(txt, 'w')
+    output = open("en_wiki.txt", 'w')
     wiki = WikiCorpus(dump)
 
     i = 0
